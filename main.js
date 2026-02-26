@@ -44,13 +44,17 @@ newDiv.remove();
 // EVENTS
 
 button.addEventListener('mouseup', eventRunner);
+button.addEventListener('mousedown', eventRunner);
+button.addEventListener('dblclick', eventRunner); 
+button.addEventListener('click', eventRunner); 
 
 function eventRunner(ev) {
+    ev.preventDefault();
     console.log('ESEMÉNY: ${ev.type}');
 }
 
 
-console.log(container);
+console.log(button);
 
 
 
