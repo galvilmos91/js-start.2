@@ -46,7 +46,7 @@ newDiv.remove();
 button.addEventListener('mouseup', eventRunner);
 
 function eventRunner(ev) {
-    console.log('ESEMÉNY: ${ev.type});
+    console.log('ESEMÉNY: ${ev.type}');
 }
 
 
