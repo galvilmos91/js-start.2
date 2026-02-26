@@ -53,8 +53,32 @@ function eventRunner(ev) {
     console.log('ESEMÉNY: ${ev.type}');
 }
 
+button.addEventListener('mouseover', (ev) => {
+    //console.log(ev.target);
+    ev.target.style.background = 'green';
+    ev.target.style.color = 'white';
 
-console.log(button);
+});
+
+button.addEventListener('mouseout', (ev) => {
+    //console.log(ev.target);
+    ev.target.style.background = 'red';
+    ev.target.style.color = 'yellow';
+
+});
+
+/* button.addEventListener('mousemove', (ev) => {
+    //console.log(ev.target);
+    //console.log('X: ${ev.offsetX} Y: ${ev.offsetY}');
+    console.log(ev.offsetX, ev.offsetY);
+
+}); */
+
+button.addEventListener('click', (ev) => {
+    document.squerySelector('#user-form').style.background = 'red';
+});
+
+//console.log(button);
 
 
 
