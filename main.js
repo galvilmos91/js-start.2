@@ -20,8 +20,8 @@ ul.children[1].innerHTML = '<h1>hello</h1>'; */
 
 const button = document.querySelector('#user-form input.button');
 
-button.style.background = 'green';  
-button.style.color = 'biege';  
+//button.style.background = 'green';  
+//button.style.color = 'biege';  
 
 const newDiv = document.createElement('div');
 
@@ -30,11 +30,13 @@ newDiv.classList.add('newDivClass2');
 newDiv.classList.remove('newDivClass2');
 newDiv.id = 'newDivId';
 newDiv.setAttribute('title', 'New Div Title');
+newDiv.removeAttribute('title');
 
 const ndText = document.createTextNode('Hello Világ');
 newDiv.appendChild(ndText);
 
 const container = document.querySelector('body .container');
+
 container.insertBefore(newDiv, form);
 
 newDiv.style.color = '#ff0';
@@ -75,7 +77,32 @@ button.addEventListener('mouseout', (ev) => {
 }); */
 
 button.addEventListener('click', (ev) => {
-    document.squerySelector('#user-form').style.background = 'red';
+    //document.querySelector('#user-form').style.background = 'red';
+});
+
+const nameInput = document.querySelector('#name');
+nameInput.addEventListener(`keydown`, (ev) => {
+    console.log(`ESEMÉNY: ${ev.type}`);
+});
+
+nameInput.addEventListener(`keypress`, (ev) => {
+    console.log(`ESEMÉNY: ${ev.type} ${ev.keyCode}`);
+});
+
+nameInput.addEventListener('focus', eventRunner);
+nameInput.addEventListener('blur', eventRunner);
+
+nameInput.addEventListener('cut', eventRunner); 
+nameInput.addEventListener('paste', (ev) => {
+    //ev.preventDefault();
+});
+
+nameInput.addEventListener('input', eventRunner);
+
+const select = document.querySelector('#user-form selectsx');
+
+select.addEventListener('change', (ev) => {
+    console.log(ev.target.value);
 });
 
 //console.log(button);
