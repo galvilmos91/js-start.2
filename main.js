@@ -10,7 +10,7 @@ document.querySelector('h1');
 
 const ul = document.querySelector('.items');
 
-ul.remove();
+//ul.remove();
 
 //ul.firstElementChild.remove();
 
@@ -99,7 +99,7 @@ nameInput.addEventListener('paste', (ev) => {
 
 nameInput.addEventListener('input', eventRunner);
 
-const select = document.querySelector('#user-form selectsx');
+const select = document.querySelector('#user-form select');
 
 select.addEventListener('change', (ev) => {
     console.log(ev.target.value);
